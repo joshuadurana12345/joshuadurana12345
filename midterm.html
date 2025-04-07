@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Joshua's CarZone - Explore Your Drive</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #0d47a1;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+nav {
+  background-color: #1c1c1c;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li a {
+  padding: 15px 25px;
+  color: white;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #333;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+}
+
+.sidebar {
+  flex: 1;
+  min-width: 200px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.sidebar h3 {
+  margin-bottom: 15px;
+}
+
+.sidebar ul {
+  list-style: square;
+  padding-left: 20px;
+}
+
+main {
+  flex: 3;
+  min-width: 300px;
+}
+
+.featured {
+  background: white;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.featured img {
+  width: 100%;
+  border-radius: 8px;
+  margin: 15px 0;
+}
+
+.gallery h2 {
+  margin-bottom: 15px;
+}
+
+.car-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.car-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.car-card:hover {
+  transform: translateY(-5px);
+}
+
+.car-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: #1c1c1c;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li a {
+    text-align: center;
+    border-top: 1px solid #444;
+  }
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Joshua's CarZone</h1>
+    <p>Explore Your Drive</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Cars</a></li>
+      <li><a href="#">Brands</a></li>
+      <li><a href="#">Reviews</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <aside class="sidebar">
+      <h3>Car Types</h3>
+      <ul>
+        <li>SUVs</li>
+        <li>Sedans</li>
+        <li>Sports</li>
+        <li>Electric</li>
+      </ul>
+    </aside>
+
+    <main>
+      <section class="featured">
+        <h2>Featured Car</h2>
+        <img src="images3.jpeg" alt="Featured Car">
+        <p>The Lamborghini Aventador is a mid-engine, two passenger sports car manufactured and marketed by Lamborghini.</p>
+      </section>
+
+      <section class="gallery">
+        <h2>Car Gallery</h2>
+        <div class="car-grid">
+          <div class="car-card">
+            <img src="images.jpeg" alt="Model X">
+            <h4>Model X</h4>
+            <p>Electric SUV with futuristic features.</p>
+          </div>
+          <div class="car-card">
+            <img src="images2.jpeg" alt="Mustang GT">
+            <h4>Mustang GT</h4>
+            <p>Iconic V8-powered muscle car.</p>
+          </div>
+          <div class="car-card">
+            <img src="images1.jpeg" alt="Corvette C8">
+            <h4>Corvette C8</h4>
+            <p>Mid-engine sports car built for thrill.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Joshua's CarZone. All rights reserved.</p>
+  </footer>
+</body>
+</html>
